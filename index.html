@@ -69,6 +69,14 @@
         </form>
         <div id="result"></div>
     </div>
-  
+    <script>
+        document.getElementById('circleForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const radius = parseFloat(document.getElementById('radius').value);
+            const area = Math.PI * Math.pow(radius, 2);
+            document.getElementById('result').textContent = `El área del círculo es: ${area.toFixed(2)}`;
+            });
+        </script>
+      
 </body>
 </html>
